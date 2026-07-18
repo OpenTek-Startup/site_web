@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  /* Charte graphique OpenTek - bleu extrait du logo (#1177e5) */
+  --primary-orange: #1177e5;
+  --on-orange: #0b4d94;
+  --orange-light: #93c1f3;
+  --primary-darker-red: #0b4d94;
+  --sf-green: #1177e5;
+  --sf-green-light: #4a97ec;
+  --green-fade: #dbeafb;
+
+  /* Nouveaux alias plus explicites - a utiliser dans le nouveau code */
+  --primary-blue: #1177e5;
+  --on-blue: #0b4d94;
+  --blue-light: #93c1f3;
+  --blue-fade: #dbeafb;
+  --primary-white: #fefefe;
+  --on-white: #f4f4f4;
+  --strokecolor-white: #e7e7e7;
+  --on-white-light: #fdfdfd;
+  --white-fade: #ececec;
+  --primary-black: #1d1d1d;
+  --on-black: #232323;
+  --strokecolor-black: #3d3d3d;
+  --black-fade: #7e7e7e;
+  --sf-on-pm-black: #2c2c2c;
+  --feedback-red: #f54a4a;
+
+  --font-family: 'Inter', sans-serif;
+
+  --border-radius-16: 16px;
+  --border-radius-24: 24px;
+  --border-radius-30: 30px;
+  --border-radius-32: 32px;
+  --border-radius-40: 40px;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary-black);
+}
+
+body {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--strokecolor-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--strokecolor-white);
+  border-radius: 5px;
+}
+
+.container {
+  padding: 56px 5%;
+  margin: 0 auto;
+}
+
+button {
+  outline: transparent;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+textarea {
+  resize: none;
+}

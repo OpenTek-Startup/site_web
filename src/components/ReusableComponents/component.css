@@ -1,0 +1,139 @@
+.xbtn {
+  background-color: var(--primary-blue);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.xbtn:hover {
+  background-color: var(--on-blue);
+}
+
+.data-table__wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+}
+
+.data-table {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fff;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--strokecolor-white);
+}
+
+.data-table th {
+  background-color: var(--blue-fade);
+  color: var(--on-blue);
+  font-weight: 600;
+}
+
+.data-table tr:hover {
+  background-color: var(--blue-fade);
+}
+
+.data-table__actions {
+  white-space: nowrap;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 6px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn.edit-btn {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.btn.edit-btn:hover {
+  background-color: var(--on-blue);
+}
+
+.btn.delete-btn {
+  background-color: var(--feedback-red);
+  color: white;
+}
+
+.btn.delete-btn:hover {
+  opacity: 0.9;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  color: #fff;
+  background: var(--feedback-red);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px 14px;
+}
+
+.close-btn:hover {
+  opacity: 0.9;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group input {
+  flex: 1;
+  margin-left: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

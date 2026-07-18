@@ -1,0 +1,166 @@
+.footer-component {
+  background-color: #fff;
+  /* White background */
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================= */
+/* Top Row: Brand & Contact Info */
+/* ============================= */
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.footer-brand img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer-contact-info p {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+
+/* ============================ */
+/* Middle Row: 4 Columns       */
+/* ============================ */
+.footer-main-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover,
+.footer-column ul li a.active-footer-link {
+  color: var(--primary-darker-red);
+  font-weight: 500;
+  /* or your preferred highlight color */
+}
+
+/* Newsletter Column */
+.newsletter-column form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-column input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+.newsletter-column button {
+  padding: 8px 16px;
+  background-color: var(--primary-darker-red);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-column button:hover {
+  background-color: rgb(247, 85, 85);
+}
+
+/* ============================ */
+/* Bottom Row: Social & Copy    */
+/* ============================ */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social ul li a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+  transform: scale(1.1);
+}
+
+.footer-social ul li a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-copy p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =============== */
+/* RESPONSIVE CSS  */
+/* =============== */
+@media (max-width: 768px) {
+  .footer-top-row {
+    margin-bottom: 20px;
+  }
+
+  .footer-main-row {
+    margin-bottom: 20px;
+  }
+}
+.footer-newsletter-success {
+  color: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 600;
+}

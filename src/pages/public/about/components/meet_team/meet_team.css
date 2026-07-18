@@ -1,0 +1,89 @@
+.about-meet-team-section {
+  width: 100%;
+  background: var(--primary-white, #fefefe);
+  padding: 56px 80px 88px 80px;
+  box-sizing: border-box;
+}
+
+.about-meet-team-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+/*****************************************
+  Heading
+******************************************/
+.about-meet-team-section-content-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 8px;
+}
+
+.about-meet-team-section-content-heading h1 {
+  color: #1d1d1d;
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+/*****************************************
+  Description
+******************************************/
+.about-meet-team-section-content-description {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.about-meet-team-section-content-description p {
+  width: 40%;
+  text-align: center;
+  color: #1d1d1d;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/*****************************************
+  Team Members Section
+******************************************/
+.about-meet-team-section-content-membersInfo {
+  width: 100%;
+}
+
+/*****************************************
+  Responsive Adjustments
+******************************************/
+@media (max-width: 1000px) {
+  .about-meet-team-section {
+    padding: 40px 20px 60px 20px;
+  }
+
+  .about-meet-team-section-content-heading h1 {
+    font-size: clamp(28px, 5vw, 48px);
+  }
+
+  .about-meet-team-section-content-description p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-meet-team-section-content-description p {
+    width: 100%;
+    font-size: clamp(14px, 4vw, 16px);
+  }
+
+  .about-meet-team-section-content-heading h1 {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+}

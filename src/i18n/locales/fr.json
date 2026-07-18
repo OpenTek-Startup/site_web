@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "A propos",
+    "services": "Nos services",
+    "jobs": "Opportunites",
+    "events": "Evenements",
+    "blog": "Blog",
+    "contact": "Contactez-nous"
+  },
+  "footer": {
+    "tagline": "Reinventer le futur avec la technologie",
+    "programsTitle": "Programmes",
+    "programCorporate": "Entreprises",
+    "programOneToOne": "Individuel",
+    "programMeetups": "Rencontres saisonnieres",
+    "serviceTitle": "Services",
+    "serviceTraining": "Formation",
+    "serviceCoaching": "Coaching",
+    "serviceConsulting": "Conseil",
+    "sectionsTitle": "Navigation",
+    "newsletterTitle": "Newsletter",
+    "newsletterPlaceholder": "Adresse email",
+    "newsletterSubmit": "S'abonner",
+    "rights": "Tous droits reserves.",
+    "legalLink": "Mentions legales"
+  },
+  "common": {
+    "seeMore": "En savoir plus",
+    "readMore": "Lire l'article",
+    "backToBlog": "Retour au blog",
+    "loading": "Chargement...",
+    "getInTouch": "Nous contacter"
+  },
+  "contactPage": {
+    "title": "Discutons de votre projet",
+    "subtitle": "Parlez-nous de votre projet, nous serions ravis de vous aider.",
+    "name": "Votre nom",
+    "namePlaceholder": "Entrez votre nom",
+    "email": "Votre email",
+    "emailPlaceholder": "Entrez votre email",
+    "message": "Comment pouvons-nous vous aider ?",
+    "messagePlaceholder": "Decrivez votre projet...",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours...",
+    "success": "Merci ! Votre message a bien ete envoye, nous revenons vers vous rapidement.",
+    "errorRequired": "Merci de remplir tous les champs.",
+    "errorEmail": "Merci de renseigner une adresse email valide.",
+    "errorGeneric": "Une erreur est survenue. Merci de reessayer dans un instant."
+  },
+  "jobsPage": {
+    "title": "Offres d'emploi",
+    "subtitle": "Rejoignez l'equipe OpenTek et participez a des projets qui comptent.",
+    "empty": "Aucune offre d'emploi pour le moment. Revenez bientot !",
+    "deadline": "Date limite",
+    "apply": "Postuler a cette offre",
+    "applyTitle": "Postuler",
+    "fullName": "Nom complet",
+    "phone": "Telephone",
+    "coverLetter": "Lettre de motivation",
+    "cv": "CV (PDF ou Word, 5 Mo max)",
+    "send": "Envoyer ma candidature",
+    "sending": "Envoi...",
+    "close": "Fermer",
+    "successPrefix": "Merci",
+    "successSuffix": "! Votre candidature a bien ete envoyee. Nous reviendrons vers vous rapidement."
+  },
+  "eventsPage": {
+    "title": "Nos evenements",
+    "subtitle": "Retrouvez OpenTek lors de nos prochains evenements",
+    "empty": "Aucun evenement programme pour le moment. Revenez bientot !",
+    "loading": "Chargement des evenements..."
+  },
+  "blogPage": {
+    "title": "Notre blog",
+    "subtitle": "Actualites, conseils et coulisses d'OpenTek",
+    "empty": "Aucun article publie pour le moment.",
+    "loading": "Chargement des articles...",
+    "by": "Par",
+    "notFoundTitle": "Article introuvable",
+    "notFoundText": "Cet article n'existe pas ou n'est plus disponible."
+  }
+}

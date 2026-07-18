@@ -1,0 +1,97 @@
+/* Core Values Section Container */
+.core-values-section {
+    padding: 4rem 1rem;
+    background-color: #000;
+    color: #fff;
+    /* Optionally add a background image or pattern here */
+}
+
+/* Header area */
+.core-values-header {
+    text-align: flex-start;
+    margin-bottom: 1rem;
+}
+
+.core-values-header h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.core-values-header p {
+    font-size: 1.1rem;
+    color: #f2eded;
+}
+
+/* Content grid: image + list of core values */
+.core-values-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Image container */
+.core-values-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Values list */
+.core-values-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Individual value item */
+.core-value-item {
+    background: #333232;
+    border-radius: 8px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.core-value-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.core-value-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.core-value-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fcfafa;
+}
+
+/* ----------------- RESPONSIVENESS ----------------- */
+
+/* Medium screens (tablet) */
+@media (max-width: 992px) {
+    .core-values-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .core-values-header p {
+        font-size: 1rem;
+    }
+}
+
+/* Smaller screens (mobile) */
+@media (max-width: 768px) {
+    .core-values-content {
+        grid-template-columns: 1fr;
+        /* Stack image and list vertically */
+    }
+
+    .core-values-header h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,26 @@
+.not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.not-found h1 {
+  font-size: 80px;
+  color: var(--primary-blue);
+  margin: 0;
+}
+
+.not-found p {
+  color: var(--black-fade);
+  margin-bottom: 20px;
+}
+
+.not-found a {
+  color: var(--primary-blue);
+  font-weight: 600;
+  text-decoration: none;
+}

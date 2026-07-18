@@ -1,0 +1,140 @@
+/*****************************************
+  Container & Layout
+******************************************/
+.about-hero-section {
+  background: #fff;
+  /* or #1d1d1d if you want a dark background */
+  padding: 80px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-hero-container {
+  margin: 0 auto;
+  display: flex;
+  /* Removed wrap-reverse and replaced with normal wrap */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/*****************************************
+  Left Column: Heading & 3 Bullet Points
+******************************************/
+.about-hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-hero-left h2 {
+  font-size: 3rem;
+  color: var(--primary-darker-red);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+/* Each bullet (Vision, Mission, Approach) */
+.about-hero-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Titles & paragraphs for each bullet */
+.about-hero-text h3 {
+  font-size: 2rem;
+  margin: 0 0 0.3rem 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.about-hero-text p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+/*****************************************
+  Right Column: Circular Image
+******************************************/
+.about-hero-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero-image-circle {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  /* border: 6px solid var(--primary-darker-red); */
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+}
+
+.about-hero-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*****************************************
+  Responsive Adjustments
+******************************************/
+@media (max-width: 768px) {
+
+  /* Stack columns, but place image above text */
+  .about-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Force the image (right) to appear first in the DOM flow */
+  .about-hero-right {
+    order: 1;
+    margin-bottom: 20px;
+    /* spacing between image and text */
+  }
+
+  /* Then the text (left) */
+  .about-hero-left {
+    order: 2;
+  }
+
+  .about-hero-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero-image-circle {
+    margin-top: 0;
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-hero-text h3 {
+    font-size: 1rem;
+  }
+
+  .about-hero-text p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,37 @@
+.collection-manager__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.collection-manager__header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  color: var(--primary-black);
+}
+
+.collection-manager__subtitle {
+  margin: 0;
+  color: var(--black-fade);
+  font-size: 14px;
+}
+
+.collection-manager__notice {
+  background: var(--blue-fade);
+  color: var(--on-blue);
+  border: 1px solid var(--blue-light);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.collection-manager__notice code {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1px 6px;
+  border-radius: 4px;
+}

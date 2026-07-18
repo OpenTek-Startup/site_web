@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About Us",
+    "services": "Our Services",
+    "jobs": "Opportunities",
+    "events": "Events",
+    "blog": "Blog",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "tagline": "Reinventing the Future with Technology",
+    "programsTitle": "Programs",
+    "programCorporate": "Corporate",
+    "programOneToOne": "One to One",
+    "programMeetups": "Seasonal Meetups",
+    "serviceTitle": "Service",
+    "serviceTraining": "Training",
+    "serviceCoaching": "Coaching",
+    "serviceConsulting": "Consulting",
+    "sectionsTitle": "Sections",
+    "newsletterTitle": "Newsletter",
+    "newsletterPlaceholder": "Email Address",
+    "newsletterSubmit": "Subscribe",
+    "rights": "All Rights Reserved.",
+    "legalLink": "Legal Notice"
+  },
+  "common": {
+    "seeMore": "See More",
+    "readMore": "Read article",
+    "backToBlog": "Back to blog",
+    "loading": "Loading...",
+    "getInTouch": "Get In Touch"
+  },
+  "contactPage": {
+    "title": "Let's Talk About Your Project",
+    "subtitle": "We'd love to hear about your project and how we can help.",
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Your Email",
+    "emailPlaceholder": "Enter your email",
+    "message": "How can we help?",
+    "messagePlaceholder": "Describe your project...",
+    "submit": "Submit Request",
+    "sending": "Sending...",
+    "success": "Thank you! Your message has been sent, we'll get back to you shortly.",
+    "errorRequired": "Please fill in all fields.",
+    "errorEmail": "Please enter a valid email address.",
+    "errorGeneric": "Something went wrong. Please try again shortly."
+  },
+  "jobsPage": {
+    "title": "Job Openings",
+    "subtitle": "Join the OpenTek team and work on projects that matter.",
+    "empty": "No job openings right now. Check back soon!",
+    "deadline": "Deadline",
+    "apply": "Apply for this position",
+    "applyTitle": "Apply",
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "coverLetter": "Cover Letter",
+    "cv": "CV (PDF or Word, max 5 MB)",
+    "send": "Send my application",
+    "sending": "Sending...",
+    "close": "Close",
+    "successPrefix": "Thank you",
+    "successSuffix": "! Your application has been sent. We'll get back to you soon."
+  },
+  "eventsPage": {
+    "title": "Our Events",
+    "subtitle": "Meet OpenTek at our upcoming events",
+    "empty": "No events scheduled right now. Check back soon!",
+    "loading": "Loading events..."
+  },
+  "blogPage": {
+    "title": "Our Blog",
+    "subtitle": "News, tips and behind the scenes at OpenTek",
+    "empty": "No articles published yet.",
+    "loading": "Loading articles...",
+    "by": "By",
+    "notFoundTitle": "Article not found",
+    "notFoundText": "This article doesn't exist or is no longer available."
+  }
+}

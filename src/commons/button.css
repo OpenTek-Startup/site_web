@@ -1,0 +1,19 @@
+.btn-primary {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  border: none;
+  background: var(--primary-darker-red);
+  color: var(--primary-white);
+  font-weight: 600;
+
+  font-size: 18px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-darker-red);
+}

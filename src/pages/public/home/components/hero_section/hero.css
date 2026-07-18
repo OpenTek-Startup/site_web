@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* 
+  1. Make the hero section fill the available space (height can be adjusted).
+  2. Use the imported hero image as the background (cover ensures it fills).
+*/
+.home-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  background: url("../../../../assets/images/hero-6.png") no-repeat center center;
+  background-size: cover;
+  /* Fallback background color if image fails to load */
+  background-color: #1d1d1d;
+  overflow: hidden;
+}
+
+/* Optional overlay for improved text readability */
+.home-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.60);
+  z-index: 1;
+}
+
+/* 
+  The content container sits above the overlay (z-index: 2).
+  You can center it, left-align it, or place it anywhere you want.
+*/
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 80vw;
+  width: 90%;
+  top: 15vh;
+  margin: 0 auto;
+  text-align: left;
+  /* or center if you prefer centered text */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.home-hero-content h1,
+.home-hero-content p {
+  margin: 0;
+}
+
+.home-hero-content p {
+  max-width: 65vw;
+}
+
+/* Reuse your original text styles */
+.display-lg {
+  color: var(--primary-white, #ffffff);
+  font-size: 3rem !important;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.52px;
+}
+
+.body-lg {
+  color: var(--primary-white, #ffffff);
+  font-family: var(--font-family, sans-serif);
+  font-size: 1.125rem;
+  /* 18px */
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.home-hero-section-container-btn-grp {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Adjust button group on smaller screens */
+@media (max-width: 600px) {
+  .display-lg {
+    font-size: 2rem !important;
+    line-height: 1.3;
+  }
+  .home-hero-content p {
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 95vw;
+  }
+    .home-hero-content {
+      max-width: 90vw;
+      width: 90%;
+      top: 3vh;
+      align-items: center;
+      text-align: center;
+    }
+  .home-hero-section-container-btn-grp {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

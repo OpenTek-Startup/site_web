@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.opentek.com/fr</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.opentek.com/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.opentek.com/en" />
+  </url>
+  <url>
+    <loc>https://www.opentek.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.opentek.com/fr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.opentek.com/en" />
+  </url>
+  <url>
+    <loc>https://www.opentek.com/fr/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.opentek.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.opentek.com/en/about" />
+  </url>
+  <url>
+    <loc>https://www.opentek.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.opentek.com/fr/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.opentek.com/en/about" />
+  </url>
+</urlset>
