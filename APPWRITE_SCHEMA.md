@@ -7,7 +7,6 @@ suffit de creer les collections, puis de reporter leurs vrais IDs dans le
 fichier `.env` (voir `.env.example`).
 
 Base de donnees a utiliser : celle deja existante
-(`VITE_APPWRITE_DATABASE_ID`, ID actuel `67eaac4d00270f35f322`).
 
 ---
 
@@ -140,44 +139,6 @@ Permissions recommandees :
 Permissions recommandees :
 - Creation (`create`) : `any`
 - Lecture / mise a jour / suppression : reservees au compte admin
-
-## Relations entre collections
-
-Appwrite propose un type d'attribut **Relationship** (equivalent d'une cle
-etrangere) entre deux collections. Il n'est utilise nulle part dans ce
-schema, et ce choix merite d'etre explique plutot que suppose.
-
-Le seul endroit ou une relation aurait un sens est `job_applications.jobId`,
-qui reference conceptuellement un document de la collection `jobs`. Ce
-schema utilise volontairement un simple champ `string` (l'ID du job) plus
-un champ `jobTitle` duplique (copie du titre au moment de la candidature),
-plutot qu'un attribut Relationship, pour deux raisons :
-
-1. **Historique fiable** : si une offre d'emploi est modifiee ou
-   supprimee plus tard, la candidature continue d'afficher le titre du
-   poste tel qu'il etait au moment de la candidature - ce qui est le
-   comportement souhaitable pour un enregistrement de type "archive".
-   Avec une relation stricte, supprimer le job casserait l'affichage de
-   toutes les candidatures liees (ou les supprimerait en cascade selon la
-   configuration).
-2. **Simplicite** : les attributs Relationship ajoutent de la complexite
-   de configuration (direction de la relation, comportement a la
-   suppression, cle a deux sens) pour un gain limite ici, alors que
-   l'objectif du backoffice est de rester simple a comprendre et a
-   deboguer directement dans la console Appwrite.
-
-**Si vous preferez neanmoins une vraie relation** (par exemple pour
-pouvoir naviguer directement du job vers ses candidatures dans la
-console Appwrite) : dans la collection `job_applications`, remplacer
-l'attribut `jobId` par un attribut de type **Relationship**, cible
-`jobs`, type de relation **Many to One** (plusieurs candidatures pour un
-job), et choisir un comportement a la suppression ("Restrict" pour
-empecher la suppression d'un job qui a des candidatures, ou "Set NULL"
-pour conserver les candidatures orphelines).
-
-Aucune autre collection de ce schema n'a de lien naturel avec une autre
-(Services, Portfolio, Temoignages, Equipe, Blog et Contenu des pages sont
-chacune independantes) - il n'y a donc pas d'autre relation "manquante".
 
 ## 9. `site_settings`
 
