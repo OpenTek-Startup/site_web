@@ -50,6 +50,7 @@
     "errorGeneric": "Une erreur est survenue. Merci de reessayer dans un instant."
   },
   "jobsPage": {
+    "eyebrow": "Carrieres",
     "title": "Offres d'emploi",
     "subtitle": "Rejoignez l'equipe OpenTek et participez a des projets qui comptent.",
     "empty": "Aucune offre d'emploi pour le moment. Revenez bientot !",
@@ -71,12 +72,14 @@
     "howToApply": "Comment postuler"
   },
   "eventsPage": {
+    "eyebrow": "Agenda",
     "title": "Nos evenements",
     "subtitle": "Retrouvez OpenTek lors de nos prochains evenements",
     "empty": "Aucun evenement programme pour le moment. Revenez bientot !",
     "loading": "Chargement des evenements..."
   },
   "blogPage": {
+    "eyebrow": "Blog",
     "title": "Notre blog",
     "subtitle": "Actualites, conseils et coulisses d'OpenTek",
     "empty": "Aucun article publie pour le moment.",
@@ -95,13 +98,19 @@
     "backHome": "Retour a l'accueil"
   },
   "testimonialsSection": {
+    "eyebrow": "Temoignages",
     "title": "Nos clients heureux",
     "subtitle": "Les avis de nos precieux clients"
   },
   "servicesSection": {
-    "title": "Nos services"
+    "eyebrow": "Ce que nous faisons",
+    "title": "Nos services",
+    "subtitle": "Des solutions technologiques concues pour repondre a vos besoins specifiques, du concept au deploiement."
   },
   "portfolioSection": {
-    "title": "Notre portfolio"
+    "eyebrow": "Notre travail",
+    "title": "Notre portfolio",
+    "subtitle": "Un apercu des projets que nous avons concus et livres pour nos clients.",
+    "visitProject": "Voir le projet"
   }
 }

@@ -43,6 +43,7 @@ const dummyServices = [
 
 const WhatWeDoComponent = () => {
   const [services, setServices] = useState([]);
+  const [selected, setSelected] = useState(null);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -73,26 +74,41 @@ const WhatWeDoComponent = () => {
 
   return (
     <div id="our-services" className="home-what-we-do-section-container">
-      {/* Centered wrapper with a max-width for large screens */}
-      <div className="home-what-we-do-section-wrapper-x">
-        <div className="home-what-we-do-section-heading">
-          <h1 className="display-lg-x" data-aos="fade-up">
-            {t('servicesSection.title')}
-          </h1>
+      <div className="home-what-we-do-section-wrapper-x container">
+        <div className="ot-section-header" data-aos="fade-up">
+          <span className="ot-eyebrow">{t('servicesSection.eyebrow')}</span>
+          <h2 className="ot-section-title">{t('servicesSection.title')}</h2>
+          <p className="ot-section-subtitle">{t('servicesSection.subtitle')}</p>
         </div>
 
-        <div className="home-what-we-do-section-service-cards-container">
+        <div className="ot-grid">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
               title={service.title}
               description={service.shortDescription}
               image={service.gallery[0]}
-              delay={index * 100} // Staggered animation delay
+              delay={Math.min(index * 80, 320)}
+              onSeeMore={() => setSelected(service)}
             />
           ))}
         </div>
       </div>
+
+      {selected && (
+        <div className="ot-modal-overlay" onClick={() => setSelected(null)}>
+          <div className="ot-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="ot-modal__close" onClick={() => setSelected(null)}>&times;</button>
+            {selected.gallery[0] && (
+              <div className="ot-image-frame ot-image-frame--16-9" style={{ borderRadius: 10, marginBottom: 18 }}>
+                <img src={selected.gallery[0]} alt={selected.title} />
+              </div>
+            )}
+            <h3 style={{ marginTop: 0, color: 'var(--text-heading)' }}>{selected.title}</h3>
+            <p style={{ color: 'var(--text-body)', lineHeight: 1.7 }}>{selected.shortDescription}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

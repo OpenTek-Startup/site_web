@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
-import { ButtonOutlinedBlack, ButtonOutlinedWhite } from '../../../../../commons/Button';
 import { useTranslation } from 'react-i18next';
 import { getDocuments, resolveImageUrl } from '../../../../../services/crudServices';
 import { DATABASE_ID, PROJECTS_COLLECTION_ID } from '../../../../../config/appwrite';
 import { pickLocalized } from '../../../../../i18n/pickLocalized';
-import { useLangPath } from '../../../../../i18n/useLangPath';
+import './our_projects.css';
+
 import './our_projects.css';
 
 // Dummy Projects Data (repli si la collection Appwrite est vide/absente)
@@ -44,13 +42,12 @@ const dummyProjects = [
 ];
 
 const HomeOurPortfolioSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [projects, setProjects] = useState(dummyProjects);
+  const [selected, setSelected] = useState(null);
   const { t, i18n } = useTranslation();
-  const langPath = useLangPath();
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 800, once: true });
 
     const loadProjects = async () => {
       try {
@@ -75,85 +72,67 @@ const HomeOurPortfolioSection = () => {
     loadProjects();
   }, [i18n.language]);
 
-  // Auto-slide every 10 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % projects.length);
-    }, 10000);
-    return () => clearInterval(timer);
-  }, [projects.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(prevIndex => (prevIndex - 1 + projects.length) % projects.length);
-  };
-
-  const goToSlide = index => {
-    setCurrentIndex(index);
-  };
-
   return (
     <section id="home-portfolio" className="our-portfolio-section">
-      <div className="portfolio-header" data-aos="fade-down">
-        <h1>{t('portfolioSection.title')}</h1>
-      </div>
-      <div className="slider-section">
-        <button className="slider-arrow left-arrow" onClick={prevSlide}>
-          &#10094;
-        </button>
-        <div className="slider-wrapper">
-          <div
-            className="slider-container"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {projects.map(project => (
-              <div
-                key={project._id}
-                className="slider-slide"
-                style={{
-                  backgroundImage: `url(${project.heroImages[0]})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              >
-                <div className="slide-overlay" data-aos="fade-up">
-                  <div className="slide-content">
-                    <h2>{project.title}</h2>
-                    <p>{project.shortDescription}</p>
-                    <div className="customer-rating">
-                      ★★★★★ <span>4.9/5</span>
-                    </div>
-                    {project.link ? (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <ButtonOutlinedWhite title="See More" />
-                      </a>
-                    ) : (
-                      <Link to={langPath('/')}>
-                        <ButtonOutlinedWhite title="See More" />
-                      </Link>
-                    )}
-                  </div>
-                </div>
+      <div className="container">
+        <div className="ot-section-header" data-aos="fade-up">
+          <span className="ot-eyebrow">{t('portfolioSection.eyebrow')}</span>
+          <h2 className="ot-section-title">{t('portfolioSection.title')}</h2>
+          <p className="ot-section-subtitle">{t('portfolioSection.subtitle')}</p>
+        </div>
+
+        <div className="ot-grid">
+          {projects.map((project, index) => (
+            <div
+              key={project._id}
+              className="ot-card ot-card--hoverable"
+              data-aos="fade-up"
+              data-aos-delay={Math.min(index * 80, 320)}
+            >
+              <div className="ot-image-frame ot-image-frame--16-10">
+                {project.heroImages[0] ? (
+                  <img src={project.heroImages[0]} alt={project.title} loading="lazy" />
+                ) : (
+                  <div className="ot-image-frame--placeholder">OpenTek</div>
+                )}
               </div>
-            ))}
-          </div>
-          <div className="slider-dots">
-            {projects.map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${index === currentIndex ? 'active' : ''}`}
-                onClick={() => goToSlide(index)}
-              />
-            ))}
+              <div className="ot-card__body">
+                <h3 className="portfolio-card__title">{project.title}</h3>
+                <p className="ot-clamp-3 portfolio-card__description">{project.shortDescription}</p>
+                <button className="ot-link-btn" onClick={() => setSelected(project)}>
+                  {t('common.seeMore')} <span className="ot-link-btn__arrow">&rarr;</span>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {selected && (
+        <div className="ot-modal-overlay" onClick={() => setSelected(null)}>
+          <div className="ot-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="ot-modal__close" onClick={() => setSelected(null)}>&times;</button>
+            {selected.heroImages[0] && (
+              <div className="ot-image-frame ot-image-frame--16-9" style={{ borderRadius: 10, marginBottom: 18 }}>
+                <img src={selected.heroImages[0]} alt={selected.title} />
+              </div>
+            )}
+            <h3 style={{ marginTop: 0, color: 'var(--text-heading)' }}>{selected.title}</h3>
+            <p style={{ color: 'var(--text-body)', lineHeight: 1.7 }}>{selected.shortDescription}</p>
+            {selected.link && (
+              <a
+                href={selected.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ot-link-btn"
+                style={{ marginTop: 12 }}
+              >
+                {t('portfolioSection.visitProject')} <span className="ot-link-btn__arrow">&rarr;</span>
+              </a>
+            )}
           </div>
         </div>
-        <button className="slider-arrow right-arrow" onClick={nextSlide}>
-          &#10095;
-        </button>
-      </div>
+      )}
     </section>
   );
 };

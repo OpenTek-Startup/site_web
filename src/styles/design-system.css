@@ -1,0 +1,196 @@
+/* Systeme de design partage - sections publiques (prefixe "ot-") */
+
+.ot-eyebrow {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.ot-section-title {
+  font-size: clamp(26px, 3.2vw, 34px);
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.ot-section-subtitle {
+  font-size: 16px;
+  color: var(--text-body);
+  max-width: 620px;
+  line-height: 1.6;
+  margin: 0 0 40px;
+}
+
+.ot-section-header {
+  text-align: center;
+  margin: 0 auto 44px;
+  max-width: 680px;
+}
+
+.ot-section-header .ot-section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ot-card {
+  background: var(--surface-card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ot-card--hoverable:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(17, 119, 229, 0.25);
+}
+
+.ot-card__body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ot-image-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface-page);
+}
+
+.ot-image-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ot-image-frame--16-10 { aspect-ratio: 16 / 10; }
+.ot-image-frame--16-9  { aspect-ratio: 16 / 9; }
+.ot-image-frame--4-3   { aspect-ratio: 4 / 3; }
+.ot-image-frame--1-1   { aspect-ratio: 1 / 1; }
+
+.ot-image-frame--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.ot-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ot-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ot-clamp-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+.ot-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: auto;
+  color: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+.ot-link-btn:hover {
+  color: var(--on-blue);
+  gap: 9px;
+}
+
+.ot-link-btn__arrow {
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+
+.ot-link-btn:hover .ot-link-btn__arrow {
+  transform: translateX(2px);
+}
+
+.ot-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--blue-fade);
+  color: var(--on-blue);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 4px 11px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.ot-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.ot-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 24, 40, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.ot-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(16, 24, 40, 0.25);
+}
+
+.ot-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ot-modal__close:hover {
+  background: var(--blue-fade);
+  color: var(--on-blue);
+}
+
+@media (max-width: 480px) {
+  .ot-modal { padding: 22px; }
+  .ot-section-header { margin-bottom: 32px; }
+}

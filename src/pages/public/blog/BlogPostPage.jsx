@@ -92,7 +92,7 @@ export default function BlogPostPage() {
           </div>
         )}
 
-        {post.category && <span className="blog-public__category">{post.category}</span>}
+        {post.category && <span className="ot-badge">{post.category}</span>}
         <h1>{title}</h1>
         {post.author && <p className="blog-post__meta">{t("blogPage.by")} {post.author}</p>}
 

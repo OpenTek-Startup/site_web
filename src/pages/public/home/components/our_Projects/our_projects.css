@@ -1,161 +1,27 @@
-/* Section background and centering */
 .our-portfolio-section {
-  width: 100%;
-  background: #fbfbfb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
+  padding: 88px 24px;
+  background: #fff;
 }
 
-/* Portfolio header */
-.portfolio-header {
-  margin-bottom: 1rem;
-  text-align: center;
+.our-portfolio-section .container {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.portfolio-header h1 {
-  font-size: 2.5rem;
-  color: var(--primary-darker-red);
-  margin: 0;
+.portfolio-card__title {
+  margin: 0 0 8px;
+  color: var(--text-heading);
+  font-size: 18px;
+  font-weight: 700;
 }
 
-/* Slider section */
-.slider-section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border-radius: 10px;
-}
-
-/* Slider wrapper */
-.slider-wrapper {
-  position: relative;
-  width: 80%;
-  height: 80vh;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-/* Slider container */
-.slider-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s ease-in-out;
-  border-radius: 10px;
-}
-
-/* Each slide */
-.slider-slide {
-  min-width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 10px;
-}
-
-/* Slide overlay for readability */
-.slide-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-  padding: 2rem;
-}
-
-/* Slide content */
-.slide-content {
-  color: #fff;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
-
-/* Dots navigation */
-.slider-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-/* Navigation arrows inside slider */
-.slider-arrow {
-  background-color: var(--primary-darker-red);
-  border: none;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 20;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.left-arrow {
-  left: 10px;
-}
-
-.right-arrow {
-  right: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .slider-wrapper {
-    width: 90%;
-    height: 70vh;
-  }
-
-  .portfolio-header h1 {
-    font-size: 2rem;
-  }
+.portfolio-card__description {
+  margin: 0 0 16px;
+  color: var(--text-body);
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-  .slider-wrapper {
-    width: 95vw;
-    height: 60vh;
-    border-radius: 0;
-  }
-
-  .portfolio-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .slide-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .slide-content p {
-    font-size: 0.95rem;
-  }
-
-  /* Ensure arrows are inside the slider on small screens */
-  .slider-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    padding: 0.3rem;
-  }
+  .our-portfolio-section { padding: 60px 20px; }
 }

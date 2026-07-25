@@ -10,6 +10,7 @@ import { Suspense, lazy } from 'react';
 import 'aos/dist/aos.css';
 //Stylesheet
 import './App.css';
+import './styles/design-system.css';
 import RootLayout from './layout/RootLayout';
 import { LanguageLayout } from './layout/language/LanguageLayout';
 import { RootRedirect } from './layout/language/RootRedirect';

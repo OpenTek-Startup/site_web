@@ -155,26 +155,27 @@ export default function JobsPublicPage() {
         description="Rejoignez l'equipe OpenTek : consultez nos offres d'emploi ouvertes et postulez."
         path="/jobs"
       />
-      <div className="jobs-public__header">
-        <h1>{t("jobsPage.title")}</h1>
-        <p>{t("jobsPage.subtitle")}</p>
+      <div className="ot-section-header">
+        <span className="ot-eyebrow">{t("jobsPage.eyebrow")}</span>
+        <h1 className="ot-section-title">{t("jobsPage.title")}</h1>
+        <p className="ot-section-subtitle">{t("jobsPage.subtitle")}</p>
       </div>
 
-      {loading && <p>{t("common.loading")}</p>}
+      {loading && <p className="jobs-public__status">{t("common.loading")}</p>}
 
       {!loading && jobs.length === 0 && (
-        <p className="jobs-public__empty">{t("jobsPage.empty")}</p>
+        <p className="jobs-public__status">{t("jobsPage.empty")}</p>
       )}
 
       <div className="jobs-public__list">
         {jobs.map((job) => (
-          <div className="jobs-public__card" key={job.$id}>
-            <div>
+          <div className="ot-card ot-card--hoverable jobs-public__card" key={job.$id}>
+            <div className="jobs-public__card-main">
               <h3>{job.position}</h3>
               <p className="jobs-public__meta">
                 {job.location} {job.type ? `· ${job.type}` : ""}
               </p>
-              <p className="jobs-public__description">{job.description}</p>
+              <p className="ot-clamp-2 jobs-public__description">{job.description}</p>
             </div>
             <button className="jobs-public__btn" onClick={() => setSelectedJob(job)}>
               {t("common.seeMore")}
@@ -184,38 +185,38 @@ export default function JobsPublicPage() {
       </div>
 
       {selectedJob && (
-        <div className="jobs-public__modal-overlay" onClick={() => setSelectedJob(null)}>
-          <div className="jobs-public__modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="jobs-public__close-button" onClick={() => setSelectedJob(null)}>
-              X
+        <div className="ot-modal-overlay" onClick={() => setSelectedJob(null)}>
+          <div className="ot-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="ot-modal__close" onClick={() => setSelectedJob(null)}>
+              &times;
             </button>
-            <h2>{selectedJob.position}</h2>
+            <h2 className="jobs-public__modal-title">{selectedJob.position}</h2>
             <p className="jobs-public__meta">
               {selectedJob.location} {selectedJob.type ? `· ${selectedJob.type}` : ""}
             </p>
-            <p>{selectedJob.description}</p>
+            <p className="jobs-public__modal-text">{selectedJob.description}</p>
             {selectedJob.qualifications && (
               <>
                 <h4>{t("jobsPage.qualifications")}</h4>
-                <p>{selectedJob.qualifications}</p>
+                <p className="jobs-public__modal-text">{selectedJob.qualifications}</p>
               </>
             )}
             {selectedJob.Resposibilities && (
               <>
                 <h4>{t("jobsPage.responsibilities")}</h4>
-                <p>{selectedJob.Resposibilities}</p>
+                <p className="jobs-public__modal-text">{selectedJob.Resposibilities}</p>
               </>
             )}
             {selectedJob.years_experience && (
               <>
                 <h4>{t("jobsPage.experienceRequired")}</h4>
-                <p>{selectedJob.years_experience}</p>
+                <p className="jobs-public__modal-text">{selectedJob.years_experience}</p>
               </>
             )}
             {selectedJob.how_to_post && (
               <>
                 <h4>{t("jobsPage.howToApply")}</h4>
-                <p>{selectedJob.how_to_post}</p>
+                <p className="jobs-public__modal-text">{selectedJob.how_to_post}</p>
               </>
             )}
             {selectedJob.ending_application && (
@@ -234,12 +235,12 @@ export default function JobsPublicPage() {
       )}
 
       {applyingTo && (
-        <div className="jobs-public__modal-overlay" onClick={() => setApplyingTo(null)}>
-          <div className="jobs-public__modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="jobs-public__close-button" onClick={() => setApplyingTo(null)}>
-              X
+        <div className="ot-modal-overlay" onClick={() => setApplyingTo(null)}>
+          <div className="ot-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="ot-modal__close" onClick={() => setApplyingTo(null)}>
+              &times;
             </button>
-            <h2>{t("jobsPage.applyTitle")} : {applyingTo.position}</h2>
+            <h2 className="jobs-public__modal-title">{t("jobsPage.applyTitle")} : {applyingTo.position}</h2>
             <ApplicationForm job={applyingTo} onClose={() => setApplyingTo(null)} />
           </div>
         </div>

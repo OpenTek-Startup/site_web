@@ -35,35 +35,41 @@ export default function BlogListPage() {
         description="Actualites, conseils et coulisses d'OpenTek : retrouvez tous nos articles."
         path="/blog"
       />
-      <div className="blog-public__header">
-        <h1>{t("blogPage.title")}</h1>
-        <p>{t("blogPage.subtitle")}</p>
+
+      <div className="ot-section-header">
+        <span className="ot-eyebrow">{t("blogPage.eyebrow")}</span>
+        <h1 className="ot-section-title">{t("blogPage.title")}</h1>
+        <p className="ot-section-subtitle">{t("blogPage.subtitle")}</p>
       </div>
 
-      {loading && <p>{t("blogPage.loading")}</p>}
+      {loading && <p className="blog-public__status">{t("blogPage.loading")}</p>}
 
       {!loading && posts.length === 0 && (
-        <p className="blog-public__empty">{t("blogPage.empty")}</p>
+        <p className="blog-public__status">{t("blogPage.empty")}</p>
       )}
 
-      <div className="blog-public__grid">
+      <div className="ot-grid">
         {posts.map((post) => (
           <Link
             to={langPath(`/blog/${post.slug || post.$id}`)}
-            className="blog-public__card"
+            className="ot-card ot-card--hoverable blog-public__card"
             key={post.$id}
           >
-            {post.coverImage && (
-              <div className="blog-public__image-wrapper">
-                <img src={resolveImageUrl(post.coverImage)} alt={pickLocalized(post, 'title', i18n.language)} />
-              </div>
-            )}
-            <div className="blog-public__content">
-              {post.category && (
-                <span className="blog-public__category">{post.category}</span>
+            <div className="ot-image-frame ot-image-frame--16-10">
+              {post.coverImage ? (
+                <img
+                  src={resolveImageUrl(post.coverImage)}
+                  alt={pickLocalized(post, 'title', i18n.language)}
+                  loading="lazy"
+                />
+              ) : (
+                <div className="ot-image-frame--placeholder">OpenTek</div>
               )}
-              <h3>{pickLocalized(post, 'title', i18n.language)}</h3>
-              <p>{pickLocalized(post, 'excerpt', i18n.language)}</p>
+            </div>
+            <div className="ot-card__body">
+              {post.category && <span className="ot-badge">{post.category}</span>}
+              <h3 className="blog-public__card-title">{pickLocalized(post, 'title', i18n.language)}</h3>
+              <p className="ot-clamp-3 blog-public__card-excerpt">{pickLocalized(post, 'excerpt', i18n.language)}</p>
               {post.author && (
                 <span className="blog-public__author">{t("blogPage.by")} {post.author}</span>
               )}

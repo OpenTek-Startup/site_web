@@ -50,6 +50,7 @@
     "errorGeneric": "Something went wrong. Please try again shortly."
   },
   "jobsPage": {
+    "eyebrow": "Careers",
     "title": "Job Openings",
     "subtitle": "Join the OpenTek team and work on projects that matter.",
     "empty": "No job openings right now. Check back soon!",
@@ -71,12 +72,14 @@
     "howToApply": "How to Apply"
   },
   "eventsPage": {
+    "eyebrow": "Agenda",
     "title": "Our Events",
     "subtitle": "Meet OpenTek at our upcoming events",
     "empty": "No events scheduled right now. Check back soon!",
     "loading": "Loading events..."
   },
   "blogPage": {
+    "eyebrow": "Blog",
     "title": "Our Blog",
     "subtitle": "News, tips and behind the scenes at OpenTek",
     "empty": "No articles published yet.",
@@ -95,13 +98,19 @@
     "backHome": "Back to Home"
   },
   "testimonialsSection": {
+    "eyebrow": "Testimonials",
     "title": "Our Happy Customers",
     "subtitle": "Words of praise by our valuable customers"
   },
   "servicesSection": {
-    "title": "Our Services"
+    "eyebrow": "What we do",
+    "title": "Our Services",
+    "subtitle": "Technology solutions designed around your specific needs, from concept to deployment."
   },
   "portfolioSection": {
-    "title": "Our Portfolio"
+    "eyebrow": "Our Work",
+    "title": "Our Portfolio",
+    "subtitle": "A look at the projects we've designed and delivered for our clients.",
+    "visitProject": "Visit project"
   }
 }

@@ -1,45 +1,18 @@
 .skeleton-testimonial-home {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-}
-
-.skeleton-testimonial-home {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
-  padding: 1rem 2rem;
-  overflow-x: auto;
-  scrollbar-width: thin; /* For Firefox */
-}
-
-/* For WebKit browsers (Chrome, Safari) */
-.skeleton-testimonial-home::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-  height: 8px; /* Height of the scrollbar */
-}
-
-.skeleton-testimonial-home::-webkit-scrollbar-track {
-  background: transparent; /* Background of the track */
-}
-
-.skeleton-testimonial-home::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners */
-}
-
-.skeleton-testimonial-home::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
-}
-
-.skeleton-testimonial-home::-webkit-scrollbar-corner {
-  background: transparent; /* Background of the scrollbar corner */
 }
 
 .skeleton-testimonial-home > div {
-  background: #ebebeb;
-  height: 300px;
-  width: 400px;
-  min-width: 350px;
+  background: linear-gradient(90deg, #eef1f5 25%, #f6f8fa 37%, #eef1f5 63%);
+  background-size: 400% 100%;
+  animation: ot-skeleton-shimmer 1.4s ease infinite;
+  height: 220px;
+  border-radius: var(--card-radius, 14px);
+}
 
-  border-radius: 1rem;
+@keyframes ot-skeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
 }

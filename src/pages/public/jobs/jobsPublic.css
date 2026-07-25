@@ -1,63 +1,56 @@
 .jobs-public {
-  padding: 80px 20px;
+  padding: 72px 24px 96px;
   min-height: 60vh;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.jobs-public__header {
+.jobs-public__status {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.jobs-public__header h1 {
-  font-size: 32px;
-  color: var(--primary-black);
-  margin-bottom: 8px;
-}
-
-.jobs-public__header p {
-  color: var(--black-fade);
-}
-
-.jobs-public__empty {
-  text-align: center;
-  color: var(--black-fade);
+  color: var(--text-muted);
+  padding: 40px 0;
 }
 
 .jobs-public__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  max-width: 800px;
+  gap: 14px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
 .jobs-public__card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px;
+  padding: 24px 26px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
   flex-wrap: wrap;
+}
+
+.jobs-public__card-main {
+  flex: 1;
+  min-width: 220px;
 }
 
 .jobs-public__card h3 {
   margin: 0 0 4px;
-  color: var(--primary-black);
+  color: var(--text-heading);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .jobs-public__meta {
-  font-size: 13px;
   color: var(--primary-blue);
+  font-size: 13px;
   font-weight: 600;
   margin: 0 0 8px;
 }
 
 .jobs-public__description {
-  color: var(--black-fade);
-  font-size: 14px;
+  color: var(--text-body);
+  font-size: 14.5px;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -68,25 +61,47 @@
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
   flex-shrink: 0;
+  transition: background-color 0.2s ease;
 }
 
 .jobs-public__btn:hover {
   background: var(--on-blue);
 }
 
+.jobs-public__btn--primary {
+  margin-top: 24px;
+  width: 100%;
+}
+
 .jobs-public__deadline {
   margin-top: 16px;
   font-weight: 600;
   color: var(--feedback-red);
+  font-size: 14px;
 }
 
-.jobs-public__btn--primary {
-  margin-top: 20px;
-  width: 100%;
+.jobs-public__modal-title {
+  margin: 0 0 4px;
+  color: var(--text-heading);
+  padding-right: 30px;
 }
 
+.jobs-public__modal-text {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin: 4px 0 16px;
+}
+
+.ot-modal h4 {
+  color: var(--text-heading);
+  font-size: 14px;
+  margin: 18px 0 4px;
+}
+
+/* --- Formulaire de candidature --- */
 .jobs-public__apply-form {
   display: flex;
   flex-direction: column;
@@ -100,13 +115,13 @@
   gap: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--primary-black);
+  color: var(--text-heading);
 }
 
 .jobs-public__apply-form input,
 .jobs-public__apply-form textarea {
   padding: 10px 12px;
-  border: 1px solid var(--strokecolor-white);
+  border: 1px solid var(--card-border);
   border-radius: 8px;
   font-size: 14px;
   font-family: var(--font-family);
@@ -134,68 +149,16 @@
 
 .jobs-public__apply-success p {
   margin-bottom: 16px;
-  color: var(--primary-black);
+  color: var(--text-body);
 }
 
-/* Modales (details de l'offre + formulaire de candidature) - definies ici
-   car cette page est publique et ne doit pas dependre du CSS de l'admin.
-   Classes prefixees (jobs-public__...) pour eviter toute collision avec
-   les classes generiques .modal-content/.close-button reutilisees ailleurs
-   dans le CSS de l'admin (tout le CSS du projet est bundle globalement). */
-.jobs-public__modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  padding: 20px;
-}
+@media (max-width: 560px) {
+  .jobs-public__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.jobs-public__modal-content {
-  background: #fff;
-  border-radius: 12px;
-  padding: 28px;
-  width: 100%;
-  max-width: 560px;
-  max-height: 85vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-.jobs-public__modal-content h2,
-.jobs-public__modal-content h4 {
-  color: var(--primary-black);
-  margin: 14px 0 6px;
-}
-
-.jobs-public__modal-content h4 {
-  font-size: 14px;
-}
-
-.jobs-public__close-button {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  color: var(--black-fade);
-}
-
-.jobs-public__close-button:hover {
-  color: var(--feedback-red);
-}
-
-@media (max-width: 480px) {
-  .jobs-public__modal-content {
-    padding: 20px;
+  .jobs-public__btn:not(.jobs-public__btn--primary) {
+    width: 100%;
   }
 }
