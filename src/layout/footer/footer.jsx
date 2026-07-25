@@ -7,12 +7,14 @@ import github from '../../assets/icons/github.svg';
 import twitter from '../../assets/icons/prime_twitter.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { useLangPath } from '../../i18n/useLangPath';
+import { useSiteSettings } from '../../i18n/useSiteSettings';
 import './footer.css';
 
 const FooterComponent = () => {
   const { t } = useTranslation();
   const currentLocation = useLocation();
   const langPath = useLangPath();
+  const siteSettings = useSiteSettings();
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -42,8 +44,8 @@ const FooterComponent = () => {
             <p>{t('footer.tagline')}</p>
           </div>
           <div className="footer-contact-info">
-            <p>Mobile: +237 657 26 85 49</p>
-            <p>Email: opentek.startup@gmail.com </p>
+            <p>Mobile: {siteSettings.contactPhone}</p>
+            <p>Email: {siteSettings.contactEmail}</p>
           </div>
         </div>
 
@@ -121,26 +123,34 @@ const FooterComponent = () => {
         <div className="footer-bottom-row">
           <div className="footer-social">
             <ul>
-              <li>
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  <img src={linkedIn} alt="LinkedIn" />
-                </a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  <img src={twitter} alt="Twitter" />
-                </a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  <img src={facebook} alt="Facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  <img src={github} alt="Github" />
-                </a>
-              </li>
+              {siteSettings.linkedinUrl && (
+                <li>
+                  <a href={siteSettings.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={linkedIn} alt="LinkedIn" />
+                  </a>
+                </li>
+              )}
+              {siteSettings.twitterUrl && (
+                <li>
+                  <a href={siteSettings.twitterUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={twitter} alt="Twitter" />
+                  </a>
+                </li>
+              )}
+              {siteSettings.facebookUrl && (
+                <li>
+                  <a href={siteSettings.facebookUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={facebook} alt="Facebook" />
+                  </a>
+                </li>
+              )}
+              {siteSettings.githubUrl && (
+                <li>
+                  <a href={siteSettings.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <img src={github} alt="Github" />
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
           <div className="footer-copy">

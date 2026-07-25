@@ -64,7 +64,11 @@
     "sending": "Sending...",
     "close": "Close",
     "successPrefix": "Thank you",
-    "successSuffix": "! Your application has been sent. We'll get back to you soon."
+    "successSuffix": "! Your application has been sent. We'll get back to you soon.",
+    "qualifications": "Qualifications",
+    "responsibilities": "Responsibilities",
+    "experienceRequired": "Experience Required",
+    "howToApply": "How to Apply"
   },
   "eventsPage": {
     "title": "Our Events",
@@ -80,5 +84,24 @@
     "by": "By",
     "notFoundTitle": "Article not found",
     "notFoundText": "This article doesn't exist or is no longer available."
+  },
+  "aboutPage": {
+    "missionHeading": "Our Mission",
+    "teamHeading": "Meet the Team",
+    "teamDescription": "Our team is composed of talented professionals who are committed to driving innovation and excellence. We leverage our diverse skills and experiences to create solutions that make a difference in the world. Together, we strive to push the boundaries of what's possible."
+  },
+  "notFoundPage": {
+    "text": "This page doesn't exist or is no longer available.",
+    "backHome": "Back to Home"
+  },
+  "testimonialsSection": {
+    "title": "Our Happy Customers",
+    "subtitle": "Words of praise by our valuable customers"
+  },
+  "servicesSection": {
+    "title": "Our Services"
+  },
+  "portfolioSection": {
+    "title": "Our Portfolio"
   }
 }

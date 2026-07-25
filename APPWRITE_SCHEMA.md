@@ -193,6 +193,7 @@ coordonnees de contact, reseaux sociaux, texte du footer, etc.
 | facebookUrl | string | |
 | linkedinUrl | string | |
 | twitterUrl | string | |
+| githubUrl | string | |
 
 ---
 

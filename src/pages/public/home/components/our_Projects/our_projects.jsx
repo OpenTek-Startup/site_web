@@ -46,7 +46,7 @@ const dummyProjects = [
 const HomeOurPortfolioSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [projects, setProjects] = useState(dummyProjects);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const langPath = useLangPath();
 
   useEffect(() => {
@@ -98,7 +98,7 @@ const HomeOurPortfolioSection = () => {
   return (
     <section id="home-portfolio" className="our-portfolio-section">
       <div className="portfolio-header" data-aos="fade-down">
-        <h1>Our Portfolio</h1>
+        <h1>{t('portfolioSection.title')}</h1>
       </div>
       <div className="slider-section">
         <button className="slider-arrow left-arrow" onClick={prevSlide}>

@@ -64,7 +64,11 @@
     "sending": "Envoi...",
     "close": "Fermer",
     "successPrefix": "Merci",
-    "successSuffix": "! Votre candidature a bien ete envoyee. Nous reviendrons vers vous rapidement."
+    "successSuffix": "! Votre candidature a bien ete envoyee. Nous reviendrons vers vous rapidement.",
+    "qualifications": "Qualifications",
+    "responsibilities": "Responsabilites",
+    "experienceRequired": "Experience requise",
+    "howToApply": "Comment postuler"
   },
   "eventsPage": {
     "title": "Nos evenements",
@@ -80,5 +84,24 @@
     "by": "Par",
     "notFoundTitle": "Article introuvable",
     "notFoundText": "Cet article n'existe pas ou n'est plus disponible."
+  },
+  "aboutPage": {
+    "missionHeading": "Notre mission",
+    "teamHeading": "Rencontrez l'equipe",
+    "teamDescription": "Notre equipe est composee de professionnels talentueux engages a faire avancer l'innovation et l'excellence. Nous mettons a profit nos competences et experiences variees pour creer des solutions qui font une difference dans le monde. Ensemble, nous cherchons a repousser les limites du possible."
+  },
+  "notFoundPage": {
+    "text": "Cette page n'existe pas ou plus.",
+    "backHome": "Retour a l'accueil"
+  },
+  "testimonialsSection": {
+    "title": "Nos clients heureux",
+    "subtitle": "Les avis de nos precieux clients"
+  },
+  "servicesSection": {
+    "title": "Nos services"
+  },
+  "portfolioSection": {
+    "title": "Notre portfolio"
   }
 }

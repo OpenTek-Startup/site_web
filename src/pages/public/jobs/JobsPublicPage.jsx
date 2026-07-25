@@ -196,25 +196,25 @@ export default function JobsPublicPage() {
             <p>{selectedJob.description}</p>
             {selectedJob.qualifications && (
               <>
-                <h4>Qualifications</h4>
+                <h4>{t("jobsPage.qualifications")}</h4>
                 <p>{selectedJob.qualifications}</p>
               </>
             )}
             {selectedJob.Resposibilities && (
               <>
-                <h4>Responsabilites</h4>
+                <h4>{t("jobsPage.responsibilities")}</h4>
                 <p>{selectedJob.Resposibilities}</p>
               </>
             )}
             {selectedJob.years_experience && (
               <>
-                <h4>Experience requise</h4>
+                <h4>{t("jobsPage.experienceRequired")}</h4>
                 <p>{selectedJob.years_experience}</p>
               </>
             )}
             {selectedJob.how_to_post && (
               <>
-                <h4>Comment postuler</h4>
+                <h4>{t("jobsPage.howToApply")}</h4>
                 <p>{selectedJob.how_to_post}</p>
               </>
             )}

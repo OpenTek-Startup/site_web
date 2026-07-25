@@ -14,6 +14,7 @@ import {
   faFileLines,
   faEnvelope,
   faFileSignature,
+  faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAuth } from "../../context/AuthContext";
@@ -31,6 +32,7 @@ const NAV_ITEMS = [
   { to: "/admin/applications", label: "Candidatures", icon: faFileSignature },
   { to: "/admin/events", label: "Evenements", icon: faCalendarDays },
   { to: "/admin/contact-messages", label: "Messages de contact", icon: faEnvelope },
+  { to: "/admin/settings", label: "Parametres du site", icon: faGear },
 ];
 
 export function AdminLayout() {

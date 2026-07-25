@@ -5,8 +5,10 @@ import 'aos/dist/aos.css';
 import './hero.css';
 import { assetRepository } from '../../../../../assets/assetRepository';
 import { usePageContent } from '../../../../../i18n/usePageContent';
+import { useTranslation } from 'react-i18next';
 
 const AboutHeroComponent = () => {
+  const { t } = useTranslation();
   const vision = usePageContent('about_vision');
   const mission = usePageContent('about_mission');
   const approach = usePageContent('about_approach');
@@ -47,7 +49,7 @@ const AboutHeroComponent = () => {
       <div className="about-hero-container">
         {/* Left Column: Heading & Bullet Points */}
         <div className="about-hero-left" data-aos="fade-up" data-aos-once="true">
-          <h2>Our Mission</h2>
+          <h2>{t('aboutPage.missionHeading')}</h2>
           {items.map((item, index) => (
             <div key={index} className="about-hero-item">
               <div className="about-hero-icon">

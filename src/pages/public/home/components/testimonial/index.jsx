@@ -55,7 +55,7 @@ const HomeTestimonial = () => {
   const [loading, setLoading] = useState(true);
   const [testimonial, setTestimonial] = useState([]);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -144,8 +144,8 @@ const HomeTestimonial = () => {
         data-aos="fade-up"
         data-aos-once="true"
       >
-        <h1>Our Happy Customers</h1>
-        <p>Words of praise by our valuable customers</p>
+        <h1>{t('testimonialsSection.title')}</h1>
+        <p>{t('testimonialsSection.subtitle')}</p>
       </div>
 
       {loading ? (

@@ -1,0 +1,37 @@
+.site-settings h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  color: var(--primary-black);
+}
+
+.site-settings__subtitle {
+  margin: 0 0 20px;
+  color: var(--black-fade);
+  font-size: 14px;
+}
+
+.site-settings__notice {
+  background: var(--blue-fade);
+  color: var(--on-blue);
+  border: 1px solid var(--blue-light);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.site-settings__notice code {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.site-settings__saved {
+  background: #e3f8ec;
+  color: #1a8a4b;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}

@@ -60,7 +60,7 @@ export const Event = () => {
         }
             
          catch (error) {
-           console.log ('and error occured:', error)
+           console.error('Erreur lors de la creation/mise a jour de l\'evenement:', error)
            alert("Une erreur est survenue lors de l'enregistrement de l'evenement.")
         }}
 

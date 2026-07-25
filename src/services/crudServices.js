@@ -1,4 +1,4 @@
-import { databases, storage, ID, MEDIA_BUCKET_ID, account } from "../config/appwrite";
+import { databases, storage, ID, MEDIA_BUCKET_ID } from "../config/appwrite";
 
 // Retire les attributs systeme Appwrite ($id, $createdAt, $permissions...)
 // qui ne doivent jamais etre renvoyes dans le "data" d'un create/update -
@@ -9,13 +9,6 @@ const sanitizeDocumentData = (data = {}) =>
     Object.fromEntries(
         Object.entries(data).filter(([key]) => !key.startsWith("$"))
     );
-    
-    try {
-    const user = await account.get();
-    console.log("Utilisateur connecté :", user);
-} catch (e) {
-    console.error("Session invalide :", e);
-}
 
 export const createDocument = async(databaseId, collectionId, data)=> {
     try {

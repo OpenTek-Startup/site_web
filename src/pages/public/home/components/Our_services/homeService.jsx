@@ -43,7 +43,7 @@ const dummyServices = [
 
 const WhatWeDoComponent = () => {
   const [services, setServices] = useState([]);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -77,7 +77,7 @@ const WhatWeDoComponent = () => {
       <div className="home-what-we-do-section-wrapper-x">
         <div className="home-what-we-do-section-heading">
           <h1 className="display-lg-x" data-aos="fade-up">
-            Our Services
+            {t('servicesSection.title')}
           </h1>
         </div>
 

@@ -5,13 +5,14 @@ import "./legal.css";
 const CONTENT = {
   fr: {
     title: "Mentions legales & Politique de confidentialite",
-    updated: "Derniere mise a jour : 18/07/2026",
+    updated: "Derniere mise a jour : a completer",
     sections: [
       {
         heading: "1. Editeur du site",
-        body: `Le site OpenTek est edite par : Opentek - departement IT du groupe TKR, immatriculée sous le numero RCCM RC/YAO/2021/A/1555, NIU: P039216047336C dont le siege social est situe à Olembé entrée école, Yaoundé-Cameroun.
+        body: `Le site OpenTek (ci-apres "le Site") est edite par :
+[RAISON SOCIALE A COMPLETER], immatriculee sous le numero RCCM [A COMPLETER], dont le siege social est situe [ADRESSE A COMPLETER], Cameroun.
 Contact : opentek.startup@gmail.com — Telephone : +237 657 26 85 49
-CEO: Brown Alden Domo`,
+Directeur de la publication : [NOM A COMPLETER]`,
       },
       {
         heading: "2. Hebergement",
@@ -19,21 +20,21 @@ CEO: Brown Alden Domo`,
 Les donnees (base de donnees, fichiers, authentification) sont hebergees par Appwrite (Appwrite Cloud).`,
       },
       {
-        heading: "3. Données collectées",
+        heading: "3. Donnees collectees",
         body: `Nous collectons les donnees personnelles suivantes lorsque vous utilisez le Site :
 - Formulaire de contact : nom, email, message
 - Candidature a une offre d'emploi : nom, email, telephone, lettre de motivation, CV
 - Navigation : donnees d'usage anonymisees via Google Analytics, si active (voir section Cookies)
 
-Ces données sont necessaires pour repondre a vos demandes et ne sont utilisées a aucune autre fin sans votre consentement.`,
+Ces donnees sont necessaires pour repondre a vos demandes et ne sont utilisees a aucune autre fin sans votre consentement.`,
       },
       {
-        heading: "4. Finalité et durée de conservation",
-        body: `Les données collectées via le formulaire de contact et les candidatures sont conservées le temps nécessaire au traitement de votre demande, et au maximum 24 mois après le dernier contact, sauf obligation legale contraire.`,
+        heading: "4. Finalite et duree de conservation",
+        body: `Les donnees collectees via le formulaire de contact et les candidatures sont conservees le temps necessaire au traitement de votre demande, et au maximum 24 mois apres le dernier contact, sauf obligation legale contraire.`,
       },
       {
         heading: "5. Vos droits",
-        body: `Conformement a la reglementation applicable en matiere de protection des donnees personnelles, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition au traitement de vos donnees. Pour exercer ces droits, contactez-nous a l'adresse : opentek.startup@gmail.com`,
+        body: `Conformement a la reglementation applicable en matiere de protection des donnees personnelles, vous disposez d'un droit d'acces, de rectification, de suppression et d'opposition au traitement de vos donnees. Pour exercer ces droits, contactez-nous a l'adresse : opentek.startup@gmail.com`,
       },
       {
         heading: "6. Cookies et outils de mesure d'audience",
